@@ -122,6 +122,7 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
     
     self.tumblrHUD = [[AMTumblrHud alloc] initWithFrame:CGRectMake(0, 12, 40, 13)];
     self.tumblrHUD.hudColor = [UIColor grayColor];
+    [self.typingIndicatorView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     [self.typingIndicatorView addSubview:self.tumblrHUD];
     
     [self.tumblrHUD showAnimated:YES];
